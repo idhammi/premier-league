@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".ui.detail.DetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_team_stadium"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/background" />
+
+            <ImageView
+                android:id="@+id/iv_team_badge"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_alignParentBottom="true"
+                android:padding="@dimen/activity_horizontal_margin" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_team_name"
+            style="@style/TextContent.Black"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="8dp"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/tv_team_year"
+            style="@style/TextContent.Subtitle"
+            android:layout_marginBottom="@dimen/activity_vertical_margin" />
+
+        <TextView
+            android:id="@+id/tv_team_desc"
+            style="@style/TextContent"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:lineSpacingMultiplier="1"
+            android:textColor="@android:color/black" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    style="@style/TextDetail.Field"
+                    android:text="@string/manager" />
+
+                <TextView
+                    android:id="@+id/tv_team_manager"
+                    style="@style/TextDetail.Value" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    style="@style/TextDetail.Field"
+                    android:text="@string/stadium" />
+
+                <TextView
+                    android:id="@+id/tv_team_stadium"
+                    style="@style/TextDetail.Value" />
+            </TableRow>
+
+        </TableLayout>
+
+        <TextView
+            style="@style/TextContent.SubtitleMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/jersey"
+            android:textAlignment="center" />
+
+        <ImageView
+            android:id="@+id/iv_team_jersey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_horizontal_margin" />
+
+        <Button
+            android:id="@+id/btn_website"
+            style="@style/ButtonGeneral"
+            android:text="@string/website" />
+    </LinearLayout>
+</ScrollView>
